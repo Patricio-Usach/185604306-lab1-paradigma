@@ -1,0 +1,40 @@
+;(02) TDA system - contructor (contruir un sistema)
+	;(04) TDA system - add-drive (función que permite añadir una unidad a un sistema. La letra de la unidad es única)
+	;(03) TDA system - rum (creación de archivos, carpetas, renombrar, copiar, mover, eliminar, debe dejar un registro de la fecha de modificación, además de verificar los permisos del recurso que será alterado)
+		;(17) TDA system - dir (función para listar el contenido de un directorio específico o de toda una ruta, lo que se determina mediante parámetros)
+		;(10) TDA system - cd (change directory) (cambiar de ruta)
+		;(09) TDA system - md (make directory) (rear directorio dentro de una unidad a partir del nombre especificado "con sus respectivos registros")
+		;(11) TDA system - add-file (función que permite añadir un archivo en la ruta actual)
+		;(14) TDA system - copy (función para copiar un archivo o carpeta desde una ruta origen a una ruta destino)
+		;(15) TDA system - move (función para mover un archivo o carpeta desde una ruta origen a una ruta destino)
+		;(16) TDA system - ren (función para renombrar una carpeta o archivo)
+		;(12) TDA system - del (eliminar un archivo o varios archivos en base a un patrón determinado. El contenido eliminado se va a la papelera)
+		;(13) TDA system - rd (elimonar una carpeta, siempre y cuando este vacia)
+		;(23) TDA system - grep (función que permite buscar dentro del contenido de un archivo específico o dentro de una ruta)
+		;(24) TDA system - view-trash (función que permite obtener el contenido de la papelera de reciclaje de un sistema)
+		;(25) TDA system - restore (función que restaurar contenido específico dentro de la papelera para ubicarlo en su ubicación original)
+
+	;(05) TDA system - register (función que permite registrar un nuevo usuario al sistema. El nombre de usuario es único y no puede ser duplicado)
+	;(06) TDA system - login (función que permite iniciar sesión con un usuario del sistema, solo si éste existe)
+	;(07) TDA system - logout (función que permite cerrar la sesión de un usuario en el sistema)
+	;(08) TDA system - switch-drive (permite fijar la unidad en la que el usuario realizará acciones "permisos de usuario")
+
+;(18) TDA system - format ( función para formatear una unidad dada su letra, lo que borra todo su contenido, además de indicar nuevo nombre, pero conservando capacidad)
+      ;(19) TDA system - encryt(función para encriptar un archivo o carpeta y todo su contenido (nombres de carpetas, subcarpetas, archivos y el contenido de éstos))
+      ;(20) TDA system - decrypt (función para desencriptar un archivo o carpeta y todo su contenido (nombres de carpetas, subcarpetas, archivos y el contenido de éstos))
+      ;(21) TDA system - plus-one (función que transforma un String sumando al código ASCII de cada carácter un 1. Está función se puede usar en combinación con la función encrypt)
+      ;(22) TDA system - minus-one (función que transforma un String restando al código ASCII de cada carácter un 1. Está función se puede usar en combinación con la función encrypt)
+
+
+
+
+
+
+
+
+si 
+
+
+
+
+
