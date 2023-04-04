@@ -1,7 +1,9 @@
 #lang racket
 
-(require "185604306-Lab1-TDA-System.rkt")
+;MAIN
 
+(require "185604306-Lab1-TDA-System.rkt")
+(require "185604306-Lab1-TDA-Fecha.rtk")
 
 ;----------------------------
 ;Descripción: Funcion que permite al usuario crear un sistema
@@ -12,7 +14,8 @@
       (create-system nombre make-current-date))
 
 
-
+(system "NewSystem1")
+(system "NewSystem2")
 
 
 ;Descripción: REGISTER --> Funcion que permite registrar un nuevo usuario en el stack
