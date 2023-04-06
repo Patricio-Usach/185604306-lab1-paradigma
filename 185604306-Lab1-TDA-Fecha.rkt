@@ -2,7 +2,7 @@
 
 ;TDA FECHA
 
-(provide make-current-date)
+(provide posting-date)
 
 ;----------------------------
 ;TDA contructor 
@@ -10,4 +10,4 @@
 ;Dom:    
 ;Rec: number
 
-(define make-current-date (current-seconds))
+(define posting-date (current-seconds))

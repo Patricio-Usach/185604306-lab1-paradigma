@@ -3,7 +3,8 @@
 ;MAIN
 
 (require "185604306-Lab1-TDA-System.rkt")
-(require "185604306-Lab1-TDA-Fecha.rtk")
+(require "185604306-Lab1-TDA-Fecha.rkt")
+(require "185604306-Lab1-TDA-RUN.rkt")
 
 ;----------------------------
 ;Descripción: Funcion que permite al usuario crear un sistema
@@ -11,11 +12,14 @@
 ;Rec: stack
 
 (define (system nombre)
-      (create-system nombre make-current-date))
+      (list (create-system nombre posting-date)))
 
 
+;Ejemplos:
 (system "NewSystem1")
 (system "NewSystem2")
+;(define S0 (system "newSystem3"))
+;(define S1 (system "newSystem4"))
 
 
 ;Descripción: REGISTER --> Funcion que permite registrar un nuevo usuario en el stack
