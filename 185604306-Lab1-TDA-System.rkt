@@ -3,6 +3,7 @@
 ;TDA SYSTEM
 
 (provide create-system)
+(provide system-null?)
 
 ;----------------------------
 ;TDA contructor 
@@ -14,3 +15,10 @@
 
 (define (create-system system date)
   (list system date))
+
+;Pertenecia
+;Descripción: Funcion que validar si el systema creado es valido 
+;Dom: string   
+;Rec: booleano
+
+(define system-null? (list null null))

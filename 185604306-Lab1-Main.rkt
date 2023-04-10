@@ -7,9 +7,12 @@
 (require "185604306-Lab1-TDA-RUN.rkt")
 
 ;----------------------------
+;----------------------------
+;TDA system - system
+
 ;Descripción: Funcion que permite al usuario crear un sistema
-;Dom: string
-;Rec: stack
+;Dom: nombre (string)
+;Rec: nombre (system)
 
 (define (system nombre)
       (list (create-system nombre posting-date)))
@@ -18,8 +21,34 @@
 ;Ejemplos:
 (system "NewSystem1")
 (system "NewSystem2")
-;(define S0 (system "newSystem3"))
+(define S0 (system "newSystem3"))
 ;(define S1 (system "newSystem4"))
+
+
+
+;----------------------------
+;----------------------------
+;TDA system - run
+
+;Contructor 
+;Descripción: Funcion que permite acceder a la terminar para manipular los archovos y/o carpetas del sistema  
+;Dom: system X command (función)
+;Rec: system
+
+;(define (run command filesystem)
+;  (list command filesystem))
+
+;(define S0 (run (system "NewSystem") "addDrive"))
+;S0
+
+;(run (system “NewSystem”) addDrive)
+
+(define (run filesystem command)
+  (if (system-null? (car (car filesystem)))
+      "No exite el sistema"
+  (list filesystem command )))
+
+
 
 
 ;Descripción: REGISTER --> Funcion que permite registrar un nuevo usuario en el stack
@@ -43,18 +72,7 @@
 
 
 ;----------------------------
-;TDA system - run
 
-;Contructor 
-;Descripción: Funcion que permite acceder a la terminar para manipular los archovos y/o carpetas del sistema  
-;Dom: system X command (función)
-;Rec: system
-
-(define (run command filesystem)
-  (list command filesystem))
-
-;(define S0 (run (system "NewSystem") "addDrive"))
-;S0
 
 ;----------------------------
 ;TDA add-drive 

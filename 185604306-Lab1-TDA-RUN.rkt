@@ -19,8 +19,8 @@
 ;cd (change directory): Función que permite cambiar la ruta (path) donde se realizarán operaciones.
 ;add-file: Función que permite añadir un archivo en la ruta actual.
 
-(define lista-funcion (list "add-drive" "register" "login" "logout" "switch-drive" "md" "cd" "add-file" "" "" "" "" ""))
-(define lista-null? (list null))
+(define lista-funcion (list "add-drive" "register" "login" "logout" "switch-drive" "md" "cd" "add-file" "" "" "" "" "" ))
+
 ;----------------------------
 ;----------------------------
 
@@ -33,13 +33,21 @@
 
 
 ;TDA Pertenecia
+
+;Descripción: Función permite determinar si un elemento es un stack vacio
+;Dom: lista 
+;Rec: booleano
+
+(define lista-null? null?)
+
+
 ;Descripción: Funcion que permite validar conmando del run  
 ;Dom: lista X función (string)     
 ;Rec: booleano
 ;recur: natural
 
 (define (list-function funcion lista)
-  (if (lista-null? (car lista))
+  (if (lista-null? lista)
       #f
       (if (equal? funcion (car lista))
           #t
