@@ -1,18 +1,52 @@
 #lang racket
 
-(require "185604306-Lab1-TDA-System")
+;MAIN
+
+(require "185604306-Lab1-TDA-System.rkt")
+(require "185604306-Lab1-TDA-Fecha.rkt")
+(require "185604306-Lab1-TDA-RUN.rkt")
+
+;----------------------------
+;----------------------------
+;TDA system - system
+
+;Descripción: Funcion que permite al usuario crear un sistema
+;Dom: nombre (string)
+;Rec: nombre (system)
+
+(define (system nombre)
+      (list (create-system nombre posting-date)))
+
+
+;Ejemplos:
+(system "NewSystem1")
+(system "NewSystem2")
+(define S0 (system "newSystem3"))
+;(define S1 (system "newSystem4"))
+
 
 
 ;----------------------------
-;Descripción: Funcion que permite al usuario crear un sistema
-;Dom: 
-;Rec: stack
+;----------------------------
+;TDA system - run
 
-(define (system nombre)
-  (if (equal? nombre list-name-system)
-      "El sistema exite"
-      (create-system)))
+;Contructor 
+;Descripción: Funcion que permite acceder a la terminar para manipular los archovos y/o carpetas del sistema  
+;Dom: system X command (función)
+;Rec: system
 
+;(define (run command filesystem)
+;  (list command filesystem))
+
+;(define S0 (run (system "NewSystem") "addDrive"))
+;S0
+
+;(run (system “NewSystem”) addDrive)
+
+(define (run filesystem command)
+  (if (system-null? (car (car filesystem)))
+      "No exite el sistema"
+  (list filesystem command )))
 
 
 
@@ -22,14 +56,14 @@
 ;Rec: stack
 ;Tipo de Recursión: Natural
 
-(define (create-system name drive folder file user)
-  (list name drive folder file user))
+;(define (create-system name drive folder file user)
+;  (list name drive folder file user))
 
 ;Descripción: Funcion que permite crear un sistema 
 ;Dom: name (string)
 ;Rec: system
 
-(define (system name) (list name))
+;(define (system name) (list name))
 
 ;Script basico Pruebas
 ;(define S0 (system "newSystem"))}
@@ -38,18 +72,7 @@
 
 
 ;----------------------------
-;TDA system - run
 
-;Contructor 
-;Descripción: Funcion que permite acceder a la terminar para manipular los archovos y/o carpetas del sistema  
-;Dom: system X command (función)
-;Rec: system
-
-(define (run command filesystem)
-  (list command filesystem))
-
-;(define S0 (run (system "NewSystem") "addDrive"))
-;S0
 
 ;----------------------------
 ;TDA add-drive 
