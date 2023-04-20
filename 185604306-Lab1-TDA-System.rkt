@@ -2,8 +2,11 @@
 
 ;TDA SYSTEM
 
+(require "185604306-Lab1-TDA-Fecha.rkt")
+
 (provide create-system)
 (provide system-null?)
+(provide list-system?)
 
 ;----------------------------
 ;TDA contructor 
@@ -13,8 +16,11 @@
 ;Dom: string   
 ;Rec: lista
 
-(define (create-system system date)
-  (list system date))
+(define (create-system system-int)
+  (define (create-system-int system-int date)
+    (list system-int date))
+  (create-system-int system-int posting-date))
+
 
 ;Pertenecia
 ;Descripción: Funcion que validar si el systema creado es valido 
@@ -22,3 +28,11 @@
 ;Rec: booleano
 
 (define system-null? (list null null))
+
+
+;Selectores
+;Descripción: Funcion extrae el nombre del system
+;Dom: lista    
+;Rec: string
+
+(define list-system? caar)

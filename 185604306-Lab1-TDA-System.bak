@@ -1,7 +1,9 @@
 #lang racket
 
+;TDA SYSTEM
+
 (provide create-system)
-(provide system)
+(provide system-null?)
 
 ;----------------------------
 ;TDA contructor 
@@ -11,84 +13,12 @@
 ;Dom: string   
 ;Rec: lista
 
-; “system”, “drive”, “folder”, “file” y “user”
-(define (create-system system)
-  (list system null null null null))
-
+(define (create-system system date)
+  (list system date))
 
 ;Pertenecia
-;Descripción: Funcion que permite verificar nombre del sistema 
-;Dom: string
+;Descripción: Funcion que validar si el systema creado es valido 
+;Dom: string   
 ;Rec: booleano
 
-(define system-name? string?)
-
-;Script basico Pruebas
-;(define S0 (system "newSystem"))}
-;S0
-
-
-
-;----------------------------
-;TDA system - run
-
-;Contructor 
-;Descripción: Funcion que permite acceder a la terminar para manipular los archovos y/o carpetas del sistema  
-;Dom: system X command (función)
-;Rec: system
-
-(define (run command filesystem)
-  (list command filesystem))
-
-;(define S0 (run (system "NewSystem") "addDrive"))
-;S0
-
-;----------------------------
-;TDA add-drive 
-
-;Contructor 
-;Descripción: Funcion que permite crear una unidad "disco" el sistema, ejemplo: unidad C
-;Dom: name (string)
-;Rec: system
-
-;Selector  
-;Descripción: Funcion que permite selecionar la unidad del a trabajar en el sistema, ejemplo; elegir de la unidad C a la D
-;Dom: name (string)
-;Rec: system
-
-;Pertenecia
-;Descripción: Funcion que permite validar, si la unidad a crear esta disponible
-;Dom: name (string)
-;Rec: boolean
-
-;----------------------------
-
-
-;Pertenecia
-;Descripción: Funcion que permite validar, si a funcion ingresada es valida para el sistema
-;Dom: name (string)
-;Rec: boolean
-
-
-;Selector (DIR)
-;Descripción: Funcion que permite listar la ruta espesifica o toda la ruta
-;Dom: system X params (String list)
-;Rec: string (formateado para poder visualizarlo con display)
-
-;Modificador (CD)
-;Descripción: Funcion que permite cambiar la ruta de un archivo o carpeta
-;Dom: system X path or folderName (String)
-;Rec: string
-
-;Pertenecia (CD)
-;Descripción: Funcion que permite validar, si existe un archivo y/o carepta con el mismo nombre
-;Dom: system X path or folderName (String)
-;Rec: boolean
-
-
-
-;--------------------------
-;--------------------------
-
-
-
+(define system-null? (list null null))

@@ -15,14 +15,14 @@
 ;Rec: nombre (system)
 
 (define (system nombre)
-      (list (create-system nombre posting-date)))
+      (list-system?(list (create-system nombre))))
 
 
 ;Ejemplos:
 (system "NewSystem1")
 (system "NewSystem2")
 (define S0 (system "newSystem3"))
-;(define S1 (system "newSystem4"))
+(define S1 (system "newSystem4"))
 
 
 
