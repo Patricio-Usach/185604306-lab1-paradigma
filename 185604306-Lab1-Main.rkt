@@ -5,6 +5,7 @@
 (require "185604306-Lab1-TDA-System.rkt")
 (require "185604306-Lab1-TDA-Fecha.rkt")
 (require "185604306-Lab1-TDA-RUN.rkt")
+(require "185604306-Lab1-TDA-comandos.RTK")
 
 ;----------------------------
 ;----------------------------
@@ -35,21 +36,22 @@
 ;Dom: system X command (función)
 ;Rec: system
 
-;(define (run command filesystem)
-;  (list command filesystem))
+(define (run command filesystem)
+  (list command filesystem))
 
 ;(define S0 (run (system "NewSystem") "addDrive"))
 ;S0
 
 ;(run (system “NewSystem”) addDrive)
 
-(define (run filesystem command)
-  (if (system-null? (car (car filesystem)))
-      "No exite el sistema"
-  (list filesystem command )))
+;(define (run filesystem command)
+;  (if (system-null? (car (car filesystem)))
+;      "No exite el sistema"
+;  (list filesystem command )))
 
 
-
+;(run (system "NewSystem") "addDrive")
+(define S3 (run (system "NewSystem") "addDrive"))
 
 ;Descripción: REGISTER --> Funcion que permite registrar un nuevo usuario en el stack
 ;Dom: stack x string x string
