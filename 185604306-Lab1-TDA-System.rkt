@@ -7,12 +7,13 @@
 (provide create-system)
 (provide system-null?)
 (provide list-system?)
+(provide search-system?)
+(provide traverse-list)
 
 ;----------------------------
-;TDA contructor 
-
-;Contructor 
-;Descripción: Funcion que permite crear la estructura de un sistema con system, drive, folder, file y user
+;----------------------------
+;TDA contructor system 
+;Descripción: Función que permite crear la estructura de un sistema con system, drive, folder, file y user
 ;Dom: string   
 ;Rec: lista
 
@@ -22,17 +23,41 @@
   (create-system-int system-int posting-date))
 
 
-;Pertenecia
-;Descripción: Funcion que validar si el systema creado es valido 
+;TDA pertenecia system
+;Descripción: Función que validar si el sistema creado es válido 
 ;Dom: string   
 ;Rec: booleano
 
-(define system-null? (list null null))
+(define system-null? null)
 
 
-;Selectores
-;Descripción: Funcion extrae el nombre del system
+;Descripción: Función que permite validar la existencia de un sistema 
+;Dom: string   
+;Rec: booleano
+;Recur: natural
+
+(define (search-system? system-name L )
+  (if (null? L)
+      #f
+      (if (equal? (car L) system-name)
+          #t
+          (search-system? system-name (cdr L)))))
+
+
+;TDA selectores system
+;Descripción: Funcion extrae el nombre del system creado
 ;Dom: lista    
-;Rec: string
+;Rec: string 
 
 (define list-system? caar)
+
+
+;Descripción: Función extraer el nombre del system de una listas de listas
+;Dom: lista de lista    
+;Rec: lista
+
+(define (traverse-list L)
+  (if (null? L)
+      null
+      (cons (caar L) (traverse-list (cdr L)))))
+

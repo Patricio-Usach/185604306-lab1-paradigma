@@ -5,9 +5,9 @@
 (provide posting-date)
 
 ;----------------------------
-;TDA contructor 
-;Descripción: Funcion que permite crear la fecha actual de creación y modificación 
-;Dom:    
+;TDA contructor fecha
+;Descripción: Función que permite crear la fecha actual de creación y modificación en formato unix timestamp
+;Dom: string   
 ;Rec: number
 
 (define posting-date (current-seconds))
